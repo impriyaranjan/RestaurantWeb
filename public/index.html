@@ -24,7 +24,55 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Kitchen Restaurant</title>
+
+    <!-- To Style and add sticky functionality to navbar!! -->
+    <!-- <style>
+      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+    
+      /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+      .sticky+.content {
+        padding-top: 60px;
+      }
+    </style> -->
+    <style>
+      .html{
+      scroll-behavior: smooth;
+      }
+      body {
+      width: 100vw;
+      overflow-x: hidden;
+      /* To hide the Scrollbar */
+      overflow: overlay;
+      }
+      /* Design Scrollbar */
+      ::-webkit-scrollbar{
+        width: 15px;
+        /* for horizontal scroll if any exists */
+        height: 1em;  
+        background: transparent;
+      }
+      ::-webkit-scrollbar-track {
+        /* background: hsl(120 75% 50% / 1); */
+        /* background: transparent; */
+        /* border-radius: 5px; */
+        /*  margin-block: 0.5em;  */
+      } 
+      ::-webkit-scrollbar-thumb{
+        background: linear-gradient(transparent,#40f109);
+        height: 80px;
+        border-radius: 100vw;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(transparent, #00c6ff);
+      }
+    </style>
+    
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +87,25 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function () { myFunction() };
+
+      // Get the navbar
+      var navbar = document.getElementById("nav");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script> -->
   </body>
 </html>
